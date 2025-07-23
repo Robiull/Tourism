@@ -1,8 +1,10 @@
 ###**Tourism**  
 
-###🌍**Overview**  The Tourism project is a full-stack web application designed to streamline travel planning and tour management. Built with Node.js, Express, Mongoose, and Pug, it integrates Mapbox for location-based services, Stripe for secure payments, and SendGrid for email notifications. The application supports user authentication, tour management, bookings, reviews, and favorite tours, catering to both regular users and administrators.
+###🌍**Overview**  
+The Tourism project is a full-stack web application designed to streamline travel planning and tour management. Built with Node.js, Express, Mongoose, and Pug, it integrates Mapbox for location-based services, Stripe for secure payments, and SendGrid for email notifications. The application supports user authentication, tour management, bookings, reviews, and favorite tours, catering to both regular users and administrators.
 
-###🚀**Features**  #Explore Destinations:# Discover popular tourist attractions with detailed information.  #Travel Planning:# Tools to organize trips, including itineraries and bookings.  #User-Friendly Interface:# Responsive design for seamless use on desktop and mobile devices.  (Note: Replace with actual features of your project or remove if not applicable.)
+###🚀**Features**  
+#Explore Destinations:# Discover popular tourist attractions with detailed information.  #Travel Planning:# Tools to organize trips, including itineraries and bookings.  #User-Friendly Interface:# Responsive design for seamless use on desktop and mobile devices.  (Note: Replace with actual features of your project or remove if not applicable.)
 
 🔒**Authentication and Authorization**  #Sign Up:# Create a new account with email and password.  #Log In/Out:# Secure login and logout functionality.  #Password Management:# Update or reset passwords via email (powered by nodemailer and SendGrid).  #User Profile:# Update username, photo, email, password, and other details.  #User Roles:# Regular user, admin, lead guide, and guide with role-based access control.
 
