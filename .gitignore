@@ -3,3 +3,4 @@ node_modules/
 *.txt
 bundle.js*
 package-lock.json
+.cache/

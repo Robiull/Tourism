@@ -13240,11 +13240,10 @@ function () {
       while (1) switch (_context.p = _context.n) {
         case 0:
           _context.p = 0;
-          console.log('Email', email, ' password ', password);
           _context.n = 1;
           return (0, _axios.default)({
             method: 'POST',
-            url: 'http://127.0.0.1:7000/api/v1/user/login',
+            url: '/api/v1/user/login',
             data: {
               email: email,
               password: password
@@ -13295,7 +13294,7 @@ function () {
           _context2.n = 1;
           return (0, _axios.default)({
             method: 'GET',
-            url: 'http://127.0.0.1:7000/api/v1/user/logout'
+            url: '/api/v1/user/logout'
           });
 
         case 1:
@@ -13357,7 +13356,7 @@ function () {
       while (1) switch (_context.p = _context.n) {
         case 0:
           _context.p = 0;
-          url = type === 'password' ? 'http://127.0.0.1:7000/api/v1/user/updateMyPassword' : 'http://127.0.0.1:7000/api/v1/user/updateMe';
+          url = type === 'password' ? '/api/v1/user/updateMyPassword' : '/api/v1/user/updateMe';
           _context.n = 1;
           return (0, _axios.default)({
             method: 'PATCH',
@@ -13430,7 +13429,7 @@ function () {
           _context.n = 1;
           return (0, _axios.default)({
             method: 'POST',
-            url: 'http://127.0.0.1:7000/api/v1/user/signup',
+            url: '/api/v1/user/signup',
             data: {
               name: name,
               email: email,
@@ -13504,7 +13503,7 @@ function () {
           _context.n = 1;
           return (0, _axios.default)({
             method: 'POST',
-            url: 'http://127.0.0.1:7000/api/v1/user/forgotPassword',
+            url: '/api/v1/user/forgotPassword',
             data: {
               email: email
             }
@@ -13554,7 +13553,7 @@ function () {
           _context2.n = 1;
           return (0, _axios.default)({
             method: 'PATCH',
-            url: "http://127.0.0.1:7000/api/v1/user/resetPassword/".concat(token),
+            url: "/api/v1/user/resetPassword/".concat(token),
             data: {
               password: password,
               passwordConfirm: passwordConfirm
@@ -13849,24 +13848,23 @@ function () {
     return _regenerator().w(function (_context) {
       while (1) switch (_context.p = _context.n) {
         case 0:
-          console.log('Tour Id:', tourId);
-          _context.p = 1;
-          _context.n = 2;
+          _context.p = 0;
+          _context.n = 1;
           return stripePromise;
 
-        case 2:
+        case 1:
           stripe = _context.v;
-          _context.n = 3;
-          return (0, _axios.default)("http://127.0.0.1:7000/api/v1/bookings/checkout-session/".concat(tourId));
+          _context.n = 2;
+          return (0, _axios.default)("/api/v1/bookings/checkout-session/".concat(tourId));
 
-        case 3:
+        case 2:
           session = _context.v;
-          _context.n = 4;
+          _context.n = 3;
           return stripe.redirectToCheckout({
             sessionId: session.data.session.id
           });
 
-        case 4:
+        case 3:
           _ref3 = _context.v;
           error = _ref3.error;
 
@@ -13874,18 +13872,18 @@ function () {
             (0, _alert.showAlert)('error', error.message);
           }
 
-          _context.n = 6;
+          _context.n = 5;
           break;
 
-        case 5:
-          _context.p = 5;
+        case 4:
+          _context.p = 4;
           _t = _context.v;
           (0, _alert.showAlert)('error', _t);
 
-        case 6:
+        case 5:
           return _context.a(2);
       }
-    }, _callee, null, [[1, 5]]);
+    }, _callee, null, [[0, 4]]);
   }));
 
   return function bookTour(_x) {
@@ -14187,7 +14185,6 @@ if (loginForm) {
     e.preventDefault();
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
-    console.log('logging:', email, password);
     (0, _login.login)(email, password);
   });
 }
@@ -14311,7 +14308,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62285" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63330" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

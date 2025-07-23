@@ -5,7 +5,7 @@ export const forgotPassword=async(search)=>{
     try{
         const res= await axios({
             method:'GET',
-            url:`http://127.0.0.1:7000/api/v1/tours`,
+            url:`/api/v1/tours`,
             data:{
                 email
             }

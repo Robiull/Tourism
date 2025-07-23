@@ -9,7 +9,7 @@ const factory=require('./handlerFactory')
 
 
 exports.aliasTopTours=(req,res,next)=>{
-  console.log("i am in middleware")
+  // console.log("i am in middleware")
   req.query.limit='5';
   req.query.sort='-ratingsAverage,price';
   req.query.fields='name,price,ratingsAverage,summary,difficulty';
